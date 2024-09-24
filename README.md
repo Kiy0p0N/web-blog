@@ -43,29 +43,12 @@ Siga os passos abaixo para rodar o projeto localmente:
       Abra o navegador e acesse http://localhost:3000
 
 
-## Estrutura do Projeto
-
-|-- node_modules
-|-- public
-     |-- style
-          |-- main.css
-|-- views
-     |-- partials
-          |-- header.ejs
-          |-- footer.ejs
-     |-- edit.ejs
-     |-- index.ejs
-|-- index.js
-|-- package-lock.json
-|-- package.json
-|-- readme.md
-
 ## Dependências do Projeto
--express: Framework para o desenvolvimento web com Node.js
--ejs: Template engine para renderizar HTML dinâmico
--method-override: Middleware que permite o uso de métodos PUT e DELETE
--body-parser: Middleware para análise de dados enviados por formulários
--uuid: Biblioteca para gerar identificadores únicos (UUID)
+- express: Framework para o desenvolvimento web com Node.js
+- ejs: Template engine para renderizar HTML dinâmico
+- method-override: Middleware que permite o uso de métodos PUT e DELETE
+- body-parser: Middleware para análise de dados enviados por formulários
+- uuid: Biblioteca para gerar identificadores únicos (UUID)
 
 ### Instalação das Dependências
 Para instalar todas as dependências do projeto, execute o comando:
@@ -84,6 +67,6 @@ Para instalar todas as dependências do projeto, execute o comando:
    Clique no botão "Excluir" para remover permanentemente uma postagem.
 
 ## Melhorias Futuras
--Persistir os dados das postagens em um banco de dados (MongoDB, MySQL, etc.).
--Adicionar autenticação para proteger a criação, edição e exclusão de posts.
--Implementar a funcionalidade de busca para encontrar posts específicos.
+- Persistir os dados das postagens em um banco de dados (MongoDB, MySQL, etc.).
+- Adicionar autenticação para proteger a criação, edição e exclusão de posts.
+- Implementar a funcionalidade de busca para encontrar posts específicos.

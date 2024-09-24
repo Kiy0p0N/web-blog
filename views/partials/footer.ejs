@@ -1,0 +1,19 @@
+    <footer>
+        <button class="btn">CREATE A NEW POST</button>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(()=>{
+            $('.btn').click(()=>{
+                $('.create-post').toggleClass('active');
+            });
+
+            $('.more').click(()=>{
+                $('.options').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>

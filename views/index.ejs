@@ -1,0 +1,54 @@
+<%- include('partials/header.ejs') %>
+
+<main>
+    <div class="container">
+
+        <div class="create-post">
+            <h2>Create a new post</h2>
+
+            <form action="/posts" method="post">
+                <input type="text" name="name" id="name" placeholder="Name" maxlength="50" required>
+                <textarea name="content" id="cotent" placeholder="Content" maxlength="5000" required rows="5" style="resize: none; font-size: 1rem;" oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px';"></textarea>
+                <button type="submit">Create</button>
+            </form>
+        </div>
+
+        <div class="main-content">
+
+              <% posts.forEach(post => { %>
+                <div class="post">
+
+                    <div class="name">
+                        <h4> <%= post.name %> </h4>
+
+                        <h6><%= post.date %></h6>
+
+                        <div class="options">
+                            <!-- Form for delete post-->
+                            <form action="/posts/<%= post.id %>?_method=DELETE" method="post">
+                                <button type="submit">Delete</button>
+                            </form>
+    
+                            <!-- Form for edit post -->
+                            <form action="/posts/<%= post.id %>/edit" method="get">
+                                <button type="submit">Edit</button>
+                            </form>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                    <div class="content">
+                        <p><%= post.content %></p>
+                    </div>    
+
+                    
+                    
+                </div>
+
+              <% }) %>  
+        </div>
+    </div>
+</main>
+
+<%- include('partials/footer.ejs') %>

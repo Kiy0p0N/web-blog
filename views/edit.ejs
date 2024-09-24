@@ -1,0 +1,16 @@
+<%- include('partials/header.ejs') %>
+
+<div class="edit-post active">
+    <h1>Edit Post</h1>
+    <form action="/posts/<%= post.id %>?_method=PUT" method="POST">
+        <input type="text" name="name" value="<%= post.name %>" id="name" placeholder="Name" maxlength="50" required>
+
+        <textarea name="content" value="<%= post.content %>" id="cotent" placeholder="Content" maxlength="5000" required rows="5" style="resize: none; font-size: 1rem;" oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px';"></textarea>
+
+        <button type="submit">Update</button>
+    </form>
+</div>
+
+<footer></footer>
+</body>
+</html>

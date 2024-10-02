@@ -52,8 +52,12 @@ app.put('/posts/:id', (req, res)=>{
     const { name, content} = req.body;
     const postIndex = posts.findIndex(p => p.id == req.params.id);
 
+    // Date the post was made
+    const actualDate = new Date();
+    const date = actualDate.toLocaleString();
+
     if(postIndex !== -1){
-        posts[postIndex] = { id: req.params.id, name, content };
+        posts[postIndex] = { id: req.params.id, name, date, content };
     };
     res.redirect('/');
 });
